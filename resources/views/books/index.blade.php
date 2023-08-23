@@ -13,14 +13,14 @@
                                 Livros Cadastrados
                             </div>
                             <div class="col-2">
-                                <a class="btn btn-outline-primary btn-sm" href="">Novo</a>
+                                <a class="btn btn-outline-secondary btn-sm" href="{{ route('books-create') }}">Novo</a>
                             </div>
                         </div>
 
                         <div class="row my-3">
                             <div class="col-12">
                                 <table class="table table-bordered table-striped table-hover">
-                                    <thead style="font-size: 14px;">
+                                    <thead style="font-size: 12px;">
                                         <tr>
                                             <th>Autor</th>
                                             <th>Titulo do Livro</th>
@@ -30,7 +30,7 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody style="font-size: 14px;">
+                                    <tbody style="font-size: 12px;">
                                     @foreach( $books as $book )
                                         <tr>
                                             <td>{{ $book->author->nome }}</td>

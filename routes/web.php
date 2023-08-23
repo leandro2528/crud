@@ -20,6 +20,8 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['au
 
 Route::prefix('/livros')->group(function() {
     Route::get('/', [BookController::class, 'index'])->name('books-index');
+    Route::get('/cadastro', [BookController::class, 'create'])->name('books-create');
+    Route::post('/', [BookController::class, 'store'])->name('books-store');
 });
 
 Route::middleware('auth')->group(function () {
