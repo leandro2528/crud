@@ -41,7 +41,7 @@
                                 </li>
 
                                 <li class="ps-4 py-2">
-                                    <a href="">Livros </a>
+                                    <a href="{{ route('books-index') }}">Livros </a>
                                 </li>
 
                                 <li class="ps-4 py-4">

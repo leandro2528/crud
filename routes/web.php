@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::prefix('/livros')->group(function() {
+    Route::get('/', [BookController::class, 'index'])->name('books-index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
