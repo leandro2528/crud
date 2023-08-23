@@ -22,12 +22,17 @@ Route::prefix('/livros')->group(function() {
     Route::get('/', [BookController::class, 'index'])->name('books-index');
     Route::get('/cadastro', [BookController::class, 'create'])->name('books-create');
     Route::post('/', [BookController::class, 'store'])->name('books-store');
+    Route::get('/{id}/editar', [BookController::class, 'edit'])->name('books-edit');
+    Route::put('/{id}', [BookController::class, 'update'])->name('books-update');
+    Route::delete('/{id}', [BookController::class, 'destroy'])->name('books-destroy');
+
 });
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
 });
 
 require __DIR__.'/auth.php';

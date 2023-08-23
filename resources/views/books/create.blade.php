@@ -35,16 +35,25 @@
                                     <div class="form-group my-3">
                                         <label for="titulo">Titulo do Livro</label>
                                         <input type="text" name="titulo" class="form-control rounded">
+                                        @error('titulo')
+                                        <p class="alert alert-danger mt-2">{{ $message }}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group my-3">
                                         <label for="paginas">Quantidade de Páginas</label>
                                         <input type="text" name="paginas" class="form-control rounded">
+                                        @error('paginas')
+                                        <p class="alert alert-danger mt-2">{{ $message }}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group my-3">
                                         <label for="valor">Valor</label>
                                         <input type="text" name="valor" class="form-control rounded">
+                                        @error('valor')
+                                        <p class="alert alert-danger mt-2">{{ $message }}</p>
+                                        @enderror
                                     </div>
 
                                     <div class="form-group my-3">
