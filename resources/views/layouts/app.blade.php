@@ -52,7 +52,7 @@
 
                     </div>
                     <div class="col-10">
-                       
+                       @yield('content')
                     </div>
 
                 </div>
